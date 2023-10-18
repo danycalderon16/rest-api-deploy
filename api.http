@@ -1,0 +1,35 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar una pelicula
+GET  http://localhost:3000/movies/1
+
+### Recuperar una pelicula por un genero
+GET  http://localhost:3000/movies?genre=error
+
+
+###
+
+POST http://localhost:3000/movies  HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 2222,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ],
+  "rate":9
+}
+
+###
+PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "year": 1990
+}
